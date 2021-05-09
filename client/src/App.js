@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Container} from 'semantic-ui-react';
 
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
@@ -13,12 +14,13 @@ function App() {
   return (
     <div>
       <Router>
-        <NavBar/>
-        <Route path='/' exact component={Home}/>
-        <Route path='/login' exact component={Login}/>
-        <Route path='/register' exact component={Register}/>
+        <Container>
+          <NavBar/>
+          <Route path='/' exact component={Home}/>
+          <Route path='/login' exact component={Login}/>
+          <Route path='/register' exact component={Register}/>
+        </Container>
       </Router>
-      <h1>PLACEHODER TEXT</h1>
     </div>
   );
 }
